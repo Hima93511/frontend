@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <form autocomplete="off">
+        <input type="text" id="one">
+        <input type="password" id="two">
+        <select name="subjects" id="three">
+            <option value="OS">OS</option>
+            <option value="DSA">DSA</option>
+            <option value="C++">C++</option>
+        </select>
+        <button type="submit" id="sub">submit</button>
+    </form>
+    <script>
+        // 1st function
+        $(document).ready(function(){
+            $("#one,#two").focus(function(){
+                $("#one,#two").css("backgroundColor" , "pink");
+            });
+        })
+        // 2nd 
+        $(document).ready(function(){
+            $("#one,#two").blur(function(){
+                $("#one,#two").css("backgroundColor" , "pink");
+            });
+        })
+        // 3rd
+        $(document).ready(function(){
+            $("#one,#two").select(function(){
+                $("#one,#two").css("backgroundColor" , "white");
+            });
+        })
+        // 4th
+        $(document).ready(function(){
+            $("#three").change(function(){
+                $("#three").css("backgroundColor" , "green");
+            });
+        })
+        // 5th
+        $("#sub").click(function() {
+   alert("The Form has been Submitted.");
+});
+let pattern = '';
+for (let i = 1; i <=5; i++){
+    pattern += i;
+    console.log(pattern);
+}
+    </script>
+</body>
+</html>
